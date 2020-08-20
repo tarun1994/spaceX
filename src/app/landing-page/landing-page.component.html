@@ -1,0 +1,60 @@
+<div class="container  ">
+    <header class="m10"><label class="font-weight">SpaceX Launch Programs</label></header>
+    <div class="container-body container-center">
+        <div class="card ">
+            <label class="m0 font-weight">Filters</label>
+            <div>
+                <div class="flex-box flex-center font-label">Launch Year</div>
+                <hr class="hr-bar">
+                <div class="launch-container">
+                    <div *ngFor="let year of launchYears; let i = index">
+                        <button class=" btn-years" (click)="debounced(year);this.selectedYear = year"> {{year}}</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt20">
+                <div class="flex-box flex-center font-label ">Successful Launch</div>
+                <hr class="hr-bar">
+                <div class="launch-container">
+                    <button (click)="debounced(true);this.islaunchSuccessful = true" class="btn-years">True</button>
+                    <button (click)="debounced(false);this.islaunchSuccessful = false" class="btn-years">False</button>
+                </div>
+            </div>
+            <div class="mt20">
+                <div class="flex-box flex-center font-label ">Successful Landing</div>
+                <hr class="hr-bar">
+                <div class="launch-container">
+                    <button (click)="debounced(true);this.islandedSuccessful = true" class="btn-years">True</button>
+                    <button (click)="debounced(false);this.islandedSuccessful = false" class="btn-years">False</button>
+                </div>
+            </div>
+        </div>
+        <div class="missions-container">
+            <div class="card-items" *ngFor="let data of spacexData">
+                <img height="150px" style="border:1px solid" width="200px" src="{{data.links.mission_patch_small}}"
+                    class="center" />
+                <p class="font-weight mission-name mt12">{{data.mission_name}}</p>
+                <p class="font-weight mt12">Mission Ids</p>
+                <ul>
+                    <li *ngFor="let id of data.mission_id">
+                        {{id}}
+                    </li>
+                </ul>
+                <div class="row m0">
+                    <p class="font-weight  mt5">Launch Year</p>
+                    <p class="mt5 ml10"> {{data.launch_year}}</p>
+                </div>
+                <div class="row m0">
+                    <p class="font-weight  mt5">Successful Launch</p>
+                    <p class="mt5 m10"> {{data.launch_success}} </p>
+                </div>
+                <div class="row m0">
+                    <p class="font-weight  mt5">Successful Landing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-container">
+        <label class="font-weight center footer-label">Developed by Tarun Saini</label>
+    </footer>
+</div>

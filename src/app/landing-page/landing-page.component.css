@@ -1,0 +1,227 @@
+.flex-box {
+    display:flex;
+}
+.flex-center{
+    justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .container-body {
+    display: flex;
+    flex-wrap: wrap;
+    width:85%;
+}
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .container-center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mission-name {
+          color:blue;
+      }
+      .mt5{
+        margin-top: 5px;
+      }
+    .missions-container{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .launch-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .card {
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        padding: 16px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        height:fit-content;
+        margin-bottom:10px;
+      }
+      .hr-bar{
+        width:150px;
+    }
+    .btn-years{
+        padding:5px 20px;
+        border-color: white;
+        border-radius: 5px;
+        margin: 5px 15px;
+        background-color: greenyellow;
+    }
+    .card-items{
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        padding: 16px;
+        transition: all 0.2s ease-in-out;
+        line-height: 24px;
+        height:fit-content;  
+        width:100%;
+        margin-top:5px;
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    .container-body {
+      display: flex;
+  }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .mission-name {
+        color:blue;
+    }
+    .mt5{
+      margin-top: 5px;
+    }
+  .missions-container{
+      width:100%;
+      display:flex;
+      flex-wrap:wrap;
+  }
+    .launch-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .card {
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        padding: 5px;
+        transition: all 0.2s ease-in-out;
+        height:fit-content;
+        width:20%;
+      }
+      .hr-bar{
+        width:63%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .btn-years{
+        border-color: white;
+        border-radius: 2px; 
+        margin: 5px 15px;
+        background-color: greenyellow;
+        font-size:12px;
+        height:20px;
+        padding: 0 12px;
+    }
+    .card-items{
+      border-radius: 4px;
+      border: 1px solid #eee;
+      background-color: #fafafa;
+      padding: 16px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      height:475px;  
+      width:23%;
+      margin: 0 5px 5px 5px;
+  }
+  }
+  @media (min-width: 700px) and (max-width: 1024px) {
+    .container-body {
+      display: flex;
+  }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .mission-name {
+        color:blue;
+    }
+    .mt5{
+      margin-top: 5px;
+    }
+  .missions-container{
+      width:100%;
+      display:flex;
+      flex-wrap:wrap;
+  }
+    .launch-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .card {
+        border-radius: 4px;
+        border: 1px solid #eee;
+        background-color: #fafafa;
+        padding: 5px;
+        transition: all 0.2s ease-in-out;
+        height:fit-content;
+        width:35%;
+      }
+      .hr-bar{
+        width:63%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .btn-years{
+        border-color: white;
+        border-radius: 2px; 
+        margin: 5px 15px;
+        background-color: greenyellow;
+        font-size:12px;
+        height:20px;
+        padding: 0 12px;
+    }
+    .card-items{
+      border-radius: 4px;
+      border: 1px solid #eee;
+      background-color: #fafafa;
+      padding: 16px;
+      transition: all 0.2s ease-in-out;
+      line-height: 24px;
+      height:475px;  
+      width:40%;
+      margin: 0 5px 5px 5px;
+  }
+  }
+ .font-weight{
+     font-weight:600;
+ }
+ .font-label{
+     font-size: 12px;;
+ }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .mt20{
+    margin-top:20px;
+  }
+  .m10{
+      margin:10px;
+  }
+  .m0{
+      margin:0px;
+  }
+  .ml10{
+    margin-left:10px;
+  }
+  .footer-label{
+    align-self: center;
+    text-align: center;
+  }
+  .footer-container {
+    background-color: lightgray;
+    height: 50px;
+  }
