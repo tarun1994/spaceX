@@ -16,13 +16,11 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run spaceX-program:server:production --bundleDependencies all",
-    "start:heroku":"node dist/server",
-    "postinstall":"npm run build:ssr" 
+    "start:heroku": "node dist/server",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.5.2",
-    "jquery": "^3.5.1",
     "@angular/animations": "~8.2.14",
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
@@ -35,7 +33,10 @@
     "@nguniversal/builders": "^10.0.2",
     "@nguniversal/express-engine": "^8.2.6",
     "@nguniversal/module-map-ngfactory-loader": "v8.2.6",
+    "bootstrap": "^4.5.2",
+    "compression": "^1.7.4",
     "express": "^4.15.2",
+    "jquery": "^3.5.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

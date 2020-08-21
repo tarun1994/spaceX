@@ -22,6 +22,7 @@ import {join} from 'path';
 
 // Express server
 const app = express();
+const compression = require('compression')
 
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
@@ -51,7 +52,7 @@ app.get('*.*', express.static(DIST_FOLDER, {
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
-
+app.use(compression())
 // Start up the Node server
 app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);

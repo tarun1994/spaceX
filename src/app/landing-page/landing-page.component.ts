@@ -3,6 +3,7 @@ import { HttService } from '../htt.service';
 import { Subject } from 'rxjs';
 import { Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -15,7 +16,7 @@ export class LandingPageComponent implements OnInit {
   public selectedYear: string;
   public islaunchSuccessful: boolean;
   public islandedSuccessful: boolean;
-  public spacexData:any
+  public spacexData:any;
   constructor(private httpservice: HttService, private router: Router) { }
 
   ngOnInit() {

@@ -32,10 +32,10 @@
         <div class="missions-container">
             <div class="card-items" *ngFor="let data of spacexData">
                 <img height="150px" style="border:1px solid" width="200px" src="{{data.links.mission_patch_small}}"
-                    class="center" />
+                    class="center"/>
                 <p class="font-weight mission-name mt12">{{data.mission_name}}</p>
                 <p class="font-weight mt12">Mission Ids</p>
-                <ul>
+                <ul> 
                     <li *ngFor="let id of data.mission_id">
                         {{id}}
                     </li>
