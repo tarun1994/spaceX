@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttService } from '../htt.service';
 import { Subject } from 'rxjs';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
