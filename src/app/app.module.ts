@@ -6,10 +6,12 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { LazyImgDirective } from './lazy-img.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    LazyImgDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

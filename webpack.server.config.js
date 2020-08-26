@@ -2,7 +2,8 @@
 
 const path = require('path');
 const webpack = require('webpack');
-
+var BrotliPlugin = require('brotli-webpack-plugin');
+var CompressionPlugin= require('compression-webpack-plugin');
 module.exports = {
   mode: 'none',
   entry: {
@@ -19,8 +20,10 @@ module.exports = {
   },
   output: {
     // Puts the output at the root of the dist folder
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
+    path: path.join(__dirname, 'dist/static'),
+    filename: '[name]_[chunkhash].js',
+    chunkFilename: '[id].[chunkhash].js',
+    publicPath: '/static/',
   },
   module: {
     noParse: /polyfills-.*\.js/,
@@ -31,7 +34,9 @@ module.exports = {
         // Removing this will cause deprecation warnings to appear.
         test: /(\\|\/)@angular(\\|\/)core(\\|\/).+\.js$/,
         parser: { system: true },
-      },
+      },     
+        { test: /\.txt$/, use: 'raw-loader' }
+     
     ]
   },
   plugins: [
@@ -46,6 +51,19 @@ module.exports = {
       /(.+)?express(\\|\/)(.+)?/,
       path.join(__dirname, 'src'),
       {}
-    )
+    ),
+    new BrotliPlugin({
+      asset: '[fileWithoutExt].[ext].br',
+      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/
+  }),
+    new CompressionPlugin({
+      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/,
+      filename(info){
+          let opFile= info.path.split('.'),
+          opFileType =  opFile.pop(),
+          opFileName = opFile.join('.');
+          return `${opFileName}.${opFileType}.gzip`;
+      }
+  })
   ]
 };

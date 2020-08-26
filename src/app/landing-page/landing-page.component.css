@@ -11,6 +11,10 @@
     flex-wrap: wrap;
     width:85%;
 }
+.heading{
+  font-weight: 700;
+  font-size: 20px;
+}
     .center {
         display: block;
         margin-left: auto;
@@ -41,7 +45,7 @@
       .card {
         border-radius: 4px;
         border: 1px solid #eee;
-        background-color: #fafafa;
+        background-color:white;
         padding: 16px;
         transition: all 0.2s ease-in-out;
         line-height: 24px;
@@ -61,7 +65,7 @@
     .card-items{
         border-radius: 4px;
         border: 1px solid #eee;
-        background-color: #fafafa;
+        background-color: white;
         padding: 16px;
         transition: all 0.2s ease-in-out;
         line-height: 24px;
@@ -91,6 +95,10 @@
       display:flex;
       flex-wrap:wrap;
   }
+  .heading{
+    font-weight: 700;
+    font-size: 20px;
+  }
     .launch-container{
         display: flex;
         flex-wrap: wrap;
@@ -99,7 +107,7 @@
       .card {
         border-radius: 4px;
         border: 1px solid #eee;
-        background-color: #fafafa;
+        background-color: white;
         padding: 5px;
         transition: all 0.2s ease-in-out;
         height:fit-content;
@@ -122,7 +130,7 @@
     .card-items{
       border-radius: 4px;
       border: 1px solid #eee;
-      background-color: #fafafa;
+      background-color: white;
       padding: 16px;
       transition: all 0.2s ease-in-out;
       line-height: 24px;
@@ -134,6 +142,10 @@
   @media (min-width: 700px) and (max-width: 1024px) {
     .container-body {
       display: flex;
+  }
+  .heading{
+    font-weight: 700;
+    font-size: 20px;
   }
     .center {
       display: block;
@@ -160,7 +172,7 @@
       .card {
         border-radius: 4px;
         border: 1px solid #eee;
-        background-color: #fafafa;
+        background-color: white;
         padding: 5px;
         transition: all 0.2s ease-in-out;
         height:fit-content;
@@ -183,7 +195,7 @@
     .card-items{
       border-radius: 4px;
       border: 1px solid #eee;
-      background-color: #fafafa;
+      background-color: white;
       padding: 16px;
       transition: all 0.2s ease-in-out;
       line-height: 24px;
@@ -191,6 +203,7 @@
       width:40%;
       margin: 0 5px 5px 5px;
   }
+ 
   }
  .font-weight{
      font-weight:600;
@@ -224,4 +237,13 @@
   .footer-container {
     background-color: lightgray;
     height: 50px;
+  }
+  .bg-color{
+    background-color: #fafafa;
+  }
+  .p10{
+    padding: 10px;
+  }
+  .mt12{
+    margin-top:12px;
   }

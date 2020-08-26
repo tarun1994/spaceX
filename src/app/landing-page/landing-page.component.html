@@ -1,5 +1,5 @@
-<div class="container  ">
-    <header class="m10"><label class="font-weight">SpaceX Launch Programs</label></header>
+<div class="p10 bg-color ">
+    <header class="m10"><p class="heading">SpaceX Launch Programs</p></header>
     <div class="container-body container-center">
         <div class="card ">
             <label class="m0 font-weight">Filters</label>
@@ -31,7 +31,7 @@
         </div>
         <div class="missions-container">
             <div class="card-items" *ngFor="let data of spacexData">
-                <img height="150px" style="border:1px solid" width="200px" src="{{data.links.mission_patch_small}}"
+                <img height="150px" loading="lazy" style="border:1px solid" width="200px" src="{{data.links.mission_patch_small}}"
                     class="center"/>
                 <p class="font-weight mission-name mt12">{{data.mission_name}}</p>
                 <p class="font-weight mt12">Mission Ids</p>
@@ -41,15 +41,15 @@
                     </li>
                 </ul>
                 <div class="row m0">
-                    <p class="font-weight  mt5">Launch Year</p>
-                    <p class="mt5 ml10"> {{data.launch_year}}</p>
+                    <p class="font-weight ">Launch Year</p>
+                    <p class=" ml10"> {{data.launch_year}}</p>
                 </div>
                 <div class="row m0">
-                    <p class="font-weight  mt5">Successful Launch</p>
-                    <p class="mt5 m10"> {{data.launch_success}} </p>
+                    <p class="font-weight  ">Successful Launch</p>
+                    <p class=" ml10"> {{data.launch_success}} </p>
                 </div>
                 <div class="row m0">
-                    <p class="font-weight  mt5">Successful Landing</p>
+                    <p class="font-weight  ">Successful Landing</p>
                 </div>
             </div>
         </div>

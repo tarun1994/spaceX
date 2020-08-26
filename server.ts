@@ -22,8 +22,9 @@ import {join} from 'path';
 
 // Express server
 const app = express();
-const compression = require('compression')
-
+const path = require('path');
+//const compression = require('compression')
+const expressStaticGzip = require('express-static-gzip');
 const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
@@ -48,11 +49,22 @@ app.get('*.*', express.static(DIST_FOLDER, {
   maxAge: '1y'
 }));
 
+
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
-app.use(compression())
+//app.use(compression());
+// app.use("/", expressStaticGzip(path.join(__dirname + '/dist'), {
+//   enableBrotli: true
+// }));
+app.use('/', expressStaticGzip(path.join(__dirname + '/dist/static', {
+  enableBrotli: true,
+  orderPreference: ['br', 'gz'],
+  setHeaders: function (res, path) {
+     res.setHeader("Cache-Control", "public, max-age=31536000");
+  }
+})));
 // Start up the Node server
 app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);
