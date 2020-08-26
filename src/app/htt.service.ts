@@ -11,13 +11,4 @@ export class HttService {
    getResponse(): Observable<any>{
        return this.http.get(this.configUrl);
    }
-   getLaunchSuccessResponse(val:boolean): Observable<any>{
-        return this.http.get(this.configUrl+"&launch_success="+val);
-   }
-   getLaunchLandSuccessResponse(launchval:boolean,landval:boolean): Observable<any>{
-    return this.http.get(this.configUrl+"&launch_success="+launchval+"&land_success="+landval);
-  }
-  getAllResponse(launchval:boolean,landval:boolean,year:string): Observable<any>{
-    return this.http.get(this.configUrl+"&launch_success="+launchval+"&land_success="+landval+"&launch_year="+year);
-  }
 }

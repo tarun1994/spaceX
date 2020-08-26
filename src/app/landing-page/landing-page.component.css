@@ -55,13 +55,27 @@
       .hr-bar{
         width:150px;
     }
-    .btn-years{
+    .btn-years {
         padding:5px 20px;
         border-color: white;
         border-radius: 5px;
         margin: 5px 15px;
         background-color: greenyellow;
     }
+    .btn-launch {
+      padding:5px 20px;
+      border-color: white;
+      border-radius: 5px;
+      margin: 5px 15px;
+      background-color: greenyellow;
+  }
+  .btn-landed {
+    padding:5px 20px;
+    border-color: white;
+    border-radius: 5px;
+    margin: 5px 15px;
+    background-color: greenyellow;
+}
     .card-items{
         border-radius: 4px;
         border: 1px solid #eee;
@@ -118,7 +132,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    .btn-years{
+    .btn-years {
         border-color: white;
         border-radius: 2px; 
         margin: 5px 15px;
@@ -127,6 +141,24 @@
         height:20px;
         padding: 0 12px;
     }
+    .btn-launch {
+      border-color: white;
+      border-radius: 2px; 
+      margin: 5px 15px;
+      background-color: greenyellow;
+      font-size:12px;
+      height:20px;
+      padding: 0 12px;
+  }
+  .btn-landed {
+    border-color: white;
+    border-radius: 2px; 
+    margin: 5px 15px;
+    background-color: greenyellow;
+    font-size:12px;
+    height:20px;
+    padding: 0 12px;
+}
     .card-items{
       border-radius: 4px;
       border: 1px solid #eee;
@@ -183,7 +215,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    .btn-years{
+    .btn-years  {
         border-color: white;
         border-radius: 2px; 
         margin: 5px 15px;
@@ -192,6 +224,24 @@
         height:20px;
         padding: 0 12px;
     }
+    .btn-launch  {
+      border-color: white;
+      border-radius: 2px; 
+      margin: 5px 15px;
+      background-color: greenyellow;
+      font-size:12px;
+      height:20px;
+      padding: 0 12px;
+  }
+  .btn-landed  {
+    border-color: white;
+    border-radius: 2px; 
+    margin: 5px 15px;
+    background-color: greenyellow;
+    font-size:12px;
+    height:20px;
+    padding: 0 12px;
+}
     .card-items{
       border-radius: 4px;
       border: 1px solid #eee;
@@ -246,4 +296,7 @@
   }
   .mt12{
     margin-top:12px;
+  }
+  .selected {
+    background-color: rgb(87, 141, 5);
   }

@@ -8,7 +8,7 @@
                 <hr class="hr-bar">
                 <div class="launch-container">
                     <div *ngFor="let year of launchYears; let i = index">
-                        <button class=" btn-years" (click)="debounced(year);this.selectedYear = year"> {{year}}</button>
+                        <button class=" btn-years" (click)="debounced(year);this.selectedYear = year;" [ngClass]="{ 'selected': year==selectedYear  }" > {{year}}</button>
                     </div>
                 </div>
             </div>
@@ -16,16 +16,16 @@
                 <div class="flex-box flex-center font-label ">Successful Launch</div>
                 <hr class="hr-bar">
                 <div class="launch-container">
-                    <button (click)="debounced(true);this.islaunchSuccessful = true" class="btn-years">True</button>
-                    <button (click)="debounced(false);this.islaunchSuccessful = false" class="btn-years">False</button>
+                    <button (click)="debounced(true);this.islaunchSuccessful = true;this.islaunchTrue='yes';" class="btn-launch " [ngClass]="{ 'selected': islaunchTrue == 'yes'  }" >True</button>
+                    <button (click)="debounced(false);this.islaunchSuccessful = false;this.islaunchTrue='no';" class="btn-launch" [ngClass]="{ 'selected': islaunchTrue == 'no'  }">False</button>
                 </div>
             </div>
             <div class="mt20">
                 <div class="flex-box flex-center font-label ">Successful Landing</div>
                 <hr class="hr-bar">
                 <div class="launch-container">
-                    <button (click)="debounced(true);this.islandedSuccessful = true" class="btn-years">True</button>
-                    <button (click)="debounced(false);this.islandedSuccessful = false" class="btn-years">False</button>
+                    <button (click)="debounced(true);this.islandedSuccessful = true;this.islandedTrue='yes';" class="btn-landed"  [ngClass]="{ 'selected': islandedTrue == 'yes'  }" >True</button>
+                    <button (click)="debounced(false);this.islandedSuccessful = false;this.islandedTrue='no';" class="btn-landed"  [ngClass]="{ 'selected': islandedTrue == 'no'  }" >False</button>
                 </div>
             </div>
         </div>
