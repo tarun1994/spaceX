@@ -20,10 +20,12 @@ module.exports = {
   },
   output: {
     // Puts the output at the root of the dist folder
-    path: path.join(__dirname, 'dist/static'),
-    filename: '[name]_[chunkhash].js',
-    chunkFilename: '[id].[chunkhash].js',
-    publicPath: '/static/',
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].js'
+    // path: path.join(__dirname, 'dist/static'),
+    // filename: '[name]_[chunkhash].js',
+    // chunkFilename: '[id].[chunkhash].js',
+    // publicPath: '/static/',
   },
   module: {
     noParse: /polyfills-.*\.js/,
