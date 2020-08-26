@@ -58,7 +58,7 @@ app.get('*', (req, res) => {
 // app.use("/", expressStaticGzip(path.join(__dirname + '/dist'), {
 //   enableBrotli: true
 // }));
-app.use('/', expressStaticGzip(path.join(__dirname + '/dist/static', {
+app.use('/', expressStaticGzip(path.join(__dirname + '/dist', {
   enableBrotli: true,
   orderPreference: ['br', 'gz'],
   setHeaders: function (res, path) {
