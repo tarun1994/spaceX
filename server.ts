@@ -55,16 +55,16 @@ app.get('*', (req, res) => {
   res.render('index', { req });
 });
 //app.use(compression());
-app.use("/", expressStaticGzip(path.join(__dirname + '/dist'), {
-  enableBrotli: true
-}));
-// app.use('/', expressStaticGzip(path.join(__dirname + '/dist', {
-//   enableBrotli: true,
-//   orderPreference: ['br', 'gz'],
-//   setHeaders: function (res, path) {
-//      res.setHeader("Cache-Control", "public, max-age=31536000");
-//   }
-// })));
+// app.use("/", expressStaticGzip(path.join(__dirname + '/dist'), {
+//   enableBrotli: true
+// }));
+app.use('/', expressStaticGzip(path.join(__dirname + '/dist/static', {
+  enableBrotli: true,
+  orderPreference: ['br', 'gz'],
+  setHeaders: function (res, path) {
+     res.setHeader("Cache-Control", "public, max-age=31536000");
+  }
+})));
 // Start up the Node server
 app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);
