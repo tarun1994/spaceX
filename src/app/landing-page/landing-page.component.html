@@ -1,7 +1,7 @@
 <div class="p10 bg-color ">
     <header class="m10"><p class="heading">SpaceX Launch Programs</p></header>
     <div class="container-body container-center">
-        <div class="card ">
+        <div class="card mr10 ">
             <label class="m0 font-weight">Filters</label>
             <div>
                 <div class="flex-box flex-center font-label">Launch Year</div>
@@ -32,7 +32,7 @@
         <div class="missions-container">
             <div class="card-items" *ngFor="let data of spacexData">
                 <img height="150px" loading="lazy" style="border:1px solid" width="200px" src="{{data.links.mission_patch_small}}"
-                    class="center"/>
+                    class="center-img bg-color"/>
                 <p class="font-weight mission-name mt12">{{data.mission_name}}</p>
                 <p class="font-weight mt12">Mission Ids</p>
                 <ul> 
