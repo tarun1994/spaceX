@@ -41,6 +41,16 @@ export class LandingPageComponent implements OnInit {
       this.spacexData = this.fetchedData.filter((data) => {
         return data.launch_year === this.selectedYear;
       });
+    }else if(this.islaunchTrue===""){
+      this.router.navigate(['/all'], { queryParams: { value: this.selectedYear } })
+      this.spacexData = this.fetchedData.filter((data) => {
+        return data.launch_year === this.selectedYear && data.rocket.first_stage.cores[0].land_success === this.islandedSuccessful;
+      });
+    }else if(this.islandedTrue===""){
+      this.router.navigate(['/all'], { queryParams: { value: this.selectedYear } })
+      this.spacexData = this.fetchedData.filter((data) => {
+        return data.launch_year === this.selectedYear && data.launch_success === this.islaunchSuccessful;
+      });
     }else{
     this.router.navigate(['/all'], { queryParams: { value: this.islaunchSuccessful + "/" + this.islandedSuccessful + "/" + this.selectedYear } })
     this.spacexData = this.fetchedData.filter((data) => {
