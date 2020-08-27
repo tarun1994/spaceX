@@ -36,15 +36,15 @@ export class LandingPageComponent implements OnInit {
     });
   }
   navigate(selected: string | boolean) {
-    if(!this.islaunchSuccessful && !this.islandedSuccessful){
+    if(this.islaunchTrue===""&&this.islandedTrue===""){
       this.router.navigate(['/all'], { queryParams: { value: this.selectedYear } })
       this.spacexData = this.fetchedData.filter((data) => {
-        return data.launch_year == this.selectedYear;
+        return data.launch_year === this.selectedYear;
       });
     }else{
     this.router.navigate(['/all'], { queryParams: { value: this.islaunchSuccessful + "/" + this.islandedSuccessful + "/" + this.selectedYear } })
     this.spacexData = this.fetchedData.filter((data) => {
-      return data.launch_year == this.selectedYear && data.launch_success == this.islaunchSuccessful && data.rocket.first_stage.cores[0].land_success == this.islandedSuccessful;
+      return data.launch_year === this.selectedYear && data.launch_success === this.islaunchSuccessful && data.rocket.first_stage.cores[0].land_success === this.islandedSuccessful;
     });
   }
   }
